@@ -6,7 +6,8 @@ export async function getQuestion() {
     }
     const data = await response.json();
     return data
-    } catch (error) {
+    } 
+    catch (error) {
     console.error(error);
     }
 }

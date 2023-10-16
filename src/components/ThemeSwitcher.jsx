@@ -4,8 +4,7 @@ export const ThemeSwitcher = () => {
     const [theme, setTheme] = useState(() => {
         if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
           return "dark";
-        }
-    
+        }    
         return "light";
       });
     
@@ -23,7 +22,7 @@ export const ThemeSwitcher = () => {
     
       return (        
           <button
-            className="mt-4 bg-blue-900 dark:bg-white p-5 w-fit mx-auto"
+            className=" bg-blue-900 dark:bg-white p-2 w-fit mx-auto border-2 border-black dark:border-blue-900"
             onClick={handleChangeTheme}
           >           
             {theme==='dark'
@@ -32,4 +31,4 @@ export const ThemeSwitcher = () => {
             }
           </button>       
       );
-    }
+}
