@@ -1,15 +1,7 @@
 import { useEffect, useState } from "react";
 
-const initialTheme = () => {
-  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    return "dark";
-  }    
-  return "light";
-}
-
-
 export const ThemeSwitcher = () => {
-    const [theme, setTheme] = useState(initialTheme());
+    const [theme, setTheme] = useState('dark');
     
       useEffect(() => {
         if (theme === "dark") {
