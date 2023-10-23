@@ -1,18 +1,21 @@
 import { useEffect, useState } from "react";
 
+const initialTheme = () => {
+  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    return "dark";
+  }    
+  return "light";
+}
+
+
 export const ThemeSwitcher = () => {
-    const [theme, setTheme] = useState(() => {
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-          return "dark";
-        }    
-        return "light";
-      });
+    const [theme, setTheme] = useState(initialTheme());
     
       useEffect(() => {
         if (theme === "dark") {
-          document.querySelector("html").classList.add("dark");
+          document.querySelector("html")!.classList.add("dark");
         } else {
-          document.querySelector("html").classList.remove("dark");
+          document.querySelector("html")!.classList.remove("dark");
         }
       }, [theme]);
     
