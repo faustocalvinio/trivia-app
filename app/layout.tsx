@@ -14,8 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-white dark:bg-black flex flex-col min-h-screen justify-center items-center`}>{children}</body>
-      <link rel="icon" href="/public/lampara-favicon.png" sizes="any" />
+      <body className={`bg-white dark:bg-black flex flex-col min-h-screen justify-center items-center`}>{children}</body>   
     </html>
   )
 }
