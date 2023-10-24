@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export const ThemeSwitcher = () => {
-    const [theme, setTheme] = useState('dark');
+    const [theme, setTheme] = useState<string>('dark');
     
       useEffect(() => {
         if (theme === "dark") {
@@ -17,7 +17,7 @@ export const ThemeSwitcher = () => {
     
       return (        
           <button
-            className=" bg-blue-900 dark:bg-white p-2 w-fit mx-auto border-2 border-black dark:border-blue-900"
+            className=" bg-black dark:bg-white p-2 w-fit mx-auto border-2 border-black dark:border-white"
             onClick={handleChangeTheme}
           >           
             {theme==='dark'
