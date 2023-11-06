@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
 
-
 export const metadata: Metadata = {
   title: 'Trivia Game',
   description: 'Just a simple game using TheTriviaApi',
